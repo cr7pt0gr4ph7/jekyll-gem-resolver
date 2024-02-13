@@ -27,3 +27,5 @@ jobs:
           bundler-cache: true
       - name: Build and Publish Gem
         uses: rubygems/release-gem@v1
+        with:
+          await-release: false
