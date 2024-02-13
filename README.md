@@ -1,19 +1,49 @@
 # jekyll-gem-resolver
-Simple Jekyll plugin to allow including resources from non-Jekyll gems into the site build
 
-## History
+Simple Jekyll plugin to allow including resources from non-Jekyll gems into the site build.
+
+### Purpose
+
+When enabled, the plugin scans certain, configurable parts of your `_config.yml` file for references of the form `"gem:package:path/in/package"` (or `"gem:package/path/in/package"`) and replaces them with absolute paths to the correct Gem directory/file, using the Gem version specified in your `Gemfile` / `Gemfile.lock`.
+
+### History
+
 The origin of this plugin is that I wanted to build [Bootstrap][bootstrap-website]
-from source using Jekyll's SASS processor and the [boostrap gem][bootstrap-rubygem].
-
-But there is no easy way to reference the external files of the `bootstrap` gem
+from source using Jekyll's SASS processor and the [boostrap gem][bootstrap-rubygem]. But there is no easy way to reference the external files of the `bootstrap` gem
 in your `_config.yml`, except for using absolute paths, which feels unsatisfying for a number of reasons.
+This plugin was born to resolve this problem.
 
-I therefore built this plugin, which scans certain parts of your `_config.yml` file
-for references of the form `gem:package:path/in/package` (or `gem:package/path/in/package`)
-and replaces them with absolute paths to the correct Gem directory,
-using the Gem version specified in your `Gemfile` / `Gemfile.lock`.
+## Installation
+
+This plugin is available as a [RubyGem][published-ruby-gem].
+
+Add this line to your application's `Gemfile`:
+
+```
+gem 'jekyll-gem-resoler'
+```
+
+And then execute the `bundle` command to install the gem.
+
+Alternatively, you can also manually install the gem using the following command:
+
+```
+$ gem install jekyll-gem-resolver
+```
+
+After the plugin has been installed successfully, add the following lines to your `_config.yml` in order to tell Jekyll to use the plugin:
+
+```yaml
+plugins:
+- jekyll-gem-resolver
+
+gem_resolver:
+  transform:
+    - sass.load_paths
+```
 
 ## Usage
+
 A typical configuration could look like this:
 
 ```ruby
@@ -62,7 +92,7 @@ Gem references are written like this `"gem:package_name:path/in/package"` (or `"
 
 ```
 /home/<your_username>/.gems/gems/<package_name>@<version_from_gemfile>/<path_in_package>
-``````
+```
 
 Note that you have to use **double or single quotes** around the `gem:` references in your YAML file,
 because without it, the `gem:` prefix would erroneously be parsed as a hash by the YAML parer.
@@ -153,5 +183,14 @@ my_other_plugin:
     entry_c: "gem:package5/ghi"
 ```
 
+# Contribute
+Fork this repository, make your changes and then issue a pull request. If you find bugs or have new ideas that you do not want to implement yourself, file a bug report.
+
+# Copyright
+Copyright (c) 2024 Lukas Waslowski.
+
+License: MIT
+
 [bootstrap-website]: https://getbootstrap.com
 [bootstrap-rubygem]: https://github.com/twbs/bootstrap-rubygem
+[published-ruby-gem]: https://rubygems.org/gems/jekyll-gem-resolver
