@@ -8,10 +8,14 @@ Gem::Specification.new do |spec|
   spec.version       = Jekyll::GemResolver::VERSION
   spec.authors       = ["Lukas Waslowksi"]
   spec.email         = ["cr7pt0gr4ph7@gmail.com"]
-  spec.description   = %q{Gem resolver for Jekyll}
+  spec.description   = %q{Gem resolver plugin for Jekyll}
   spec.summary       = %q{This plugin provides simple support for resolving paths relative to the directory of specific gems.}
   spec.homepage      = "https://github.com/cr7pt0gr4ph7/jekyll-gem-resolver"
   spec.license       = "MIT"
+  spec.metadata      = {
+    "documentation_uri" => "https://github.com/cr7pt0gr4ph7/jekyll-gem-resolver",
+    "source_code_uri"   => "https://github.com/cr7pt0gr4ph7/jekyll-gem-resolver"
+  }
 
   spec.files         = [*Dir["lib/**/*.rb"], "README.md", "LICENSE"]
   spec.require_paths = ["lib"]
