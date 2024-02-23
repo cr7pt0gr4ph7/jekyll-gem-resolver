@@ -16,7 +16,7 @@ module Jekyll
 
         if /^gem:(?<gem_name>[^:]+):(?<relative_path>.*)/ =~ value
           PackageReference.new('gem', gem_name, "/#{relative_path}")
-        elsif /^gem:(?<gem_name>[^\/]+)(?<relative_path>.*)/ =~ value
+        elsif /^gem:(?<gem_name>[^\/:]+)(?<relative_path>.*)/ =~ value
           PackageReference.new('gem', gem_name, relative_path)
         else
           nil

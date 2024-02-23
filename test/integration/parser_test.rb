@@ -24,6 +24,7 @@ class ParserTest < Minitest::Test
     assert_ignored 'gem'
     assert_ignored 'gem:'
     assert_ignored 'gem:/packagename/is/missing'
+    assert_ignored 'gem::packagename/is/missing'
   end
 
   def test_matches_only_whole_string
