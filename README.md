@@ -1,5 +1,6 @@
 # jekyll-gem-resolver
 [![Gem Version](https://badge.fury.io/rb/jekyll-gem-resolver.png)](https://badge.fury.io/rb/jekyll-gem-resolver)
+[![Continuous Integration](https://github.com/cr7pt0gr4ph7/jekyll-gem-resolver/actions/workflows/ci.yml/badge.svg)](https://github.com/cr7pt0gr4ph7/jekyll-gem-resolver/actions/workflows/ci.yml)
 
 Simple Jekyll plugin that enables including resources from non-Jekyll gems into the site build.
 
