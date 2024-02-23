@@ -3,7 +3,7 @@ require 'jekyll'
 module Jekyll
   module GemResolver
     class PackageReferenceResolver
-      def resolve_reference(pkg)
+      def resolve(pkg)
         case pkg.type
         when 'gem'
           resolve_gem(pkg.name, pkg.relative_path)
