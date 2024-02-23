@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Lukas Waslowksi"]
   spec.email         = ["cr7pt0gr4ph7@gmail.com"]
   spec.description   = %q{Gem resolver plugin for Jekyll}
-  spec.summary       = %q{This plugin provides simple support for resolving paths relative to the directory of specific gems.}
+  spec.summary       = %q{Simple Jekyll plugin that enables including resources from non-Jekyll gems (primarily, but not limited to, SASS/SCSS files and static assets) into the site build.}
   spec.homepage      = "https://github.com/cr7pt0gr4ph7/jekyll-gem-resolver"
   spec.license       = "MIT"
   spec.metadata      = {
