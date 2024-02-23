@@ -13,7 +13,7 @@ When enabled, the plugin scans certain, configurable parts of your `_config.yml`
 The origin of this plugin is that I wanted to build [Bootstrap][bootstrap-website]
 from source using Jekyll's SASS processor and the [boostrap gem][bootstrap-rubygem]. But there is no easy way to reference the external files of the `bootstrap` gem
 in your `_config.yml`, except for using absolute paths, which feels unsatisfying for a number of reasons.
-This plugin was born to resolve this problem.
+This plugin was born to resolve this problem, as described in [this blog post](https://blog.taktgeber.it/2024/02/13/jekyll-gem-resolver#how-to-build-bootstrap-from-source-using-jekyll).
 
 ## Installation
 
